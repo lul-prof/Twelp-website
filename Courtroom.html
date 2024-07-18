@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video CourtRoom</title>
+    <style>
+        *
+        {
+            padding:0;
+            margin: 0;
+        }
+        body
+        {
+            background-color: rgb(33, 33, 65);
+        }
+        .conference
+        {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-around;
+
+        }
+        .conference .courtroom
+        {
+            padding: 20px;
+            font-size: 30px;
+            text-align: center;
+        }
+        .video
+        {
+            display: flex;
+            flex-direction: column;
+        }
+        .video video
+        {
+            overflow: hidden;
+            border: 3px solid skyblue;
+            aspect-ratio: 16/9;
+            
+        }
+        .video .pause-btn
+        {
+            width: 80px;
+            align-self: center;
+            margin-top: 30px;
+            border-radius: 20px;
+            background-color: red;
+            font-weight: bold;
+            border: 2px solid green;
+        }
+        .video .pause-btn:hover button:hover
+        {
+            background-color: green;
+            border:2px solid red;
+            transform:translateX(360deg);
+            transition: 0.5s;
+            transition-delay: 0s;
+            cursor: pointer;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="conference">
+        <div class="courtroom">
+            <h2>National <span>Virtual</span> Courtroom</h2>
+        </div>
+        <div class="video">
+            <video id="webcam" controls muted autoplay></video>
+            <button class="pause-btn" id="pausebtn">Pause</button>
+        </div>
+    </div>
+    <script src="script.js">
+        
+    </script>
+</body>
+
+</html>

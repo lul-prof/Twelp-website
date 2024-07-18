@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+<style>
+    *
+    {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+    .topbar, hr
+    {
+        background-color: skyblue;
+        border-radius: 5px;
+        width: 100%;
+        position: fixed;
+        height: fit-content;
+    }
+    marquee
+    {
+        font-size: 20px;
+        font-family: sans-serif;
+        font-weight: bold;
+    }
+    span
+    {
+        color: white;
+    }
+    .registration
+    {
+        display: flex;
+        padding-top: 50px;
+        flex-direction: row;
+        justify-content: center;
+        top:50%;
+        gap: 10rem;
+        background-image: url("twelp1.png");
+        background-position: center;
+        background-size: cover;
+        width: 100%;
+        height: 100vh;
+       
+    }
+    .info
+    {
+        align-items: left;
+        margin-left: -100px;
+        cursor: pointer;
+        
+    }
+    .data
+    {
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        font-size: 20px;
+        color: white;
+        padding: 10px;
+        margin: 10px,10px;
+        cursor: pointer;
+    }
+    form
+    {
+        height: fit-content;
+        width: 500px;
+    }
+    legend
+    {
+        text-align: center;
+        padding-top: 20px;
+    }
+    fieldset
+    {
+        background: transparent;
+
+        width: 100%;
+        height: 320px;
+        padding-left: 20px;
+        border-radius: 10px;
+        border: 5px solid rgb(0, 0, 0);
+        overflow: hidden;
+        outline: none;
+    }
+    p
+    {
+        margin: 10px;
+        margin-bottom: 30px;
+        font-size: 15px;
+       
+    }
+    .heading
+    {
+        text-align: center;
+        padding-bottom: 5px;
+        font-size: 30px;
+        margin: 0;
+        font-weight: bold;
+        margin-top: 100px;
+        
+    }
+    h3
+    {
+        text-align: center;
+        font-size: 30px;
+        padding-bottom: 10px;
+        margin-left: 10px;
+    }
+    h6
+    {
+       
+        text-align: center;
+        font-size: 20px;
+        margin-left: 10px;
+    }
+    a
+    {
+        font-size: 15px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        text-decoration: none;
+        color: black;
+        text-align: center;
+        font-style: italic;
+        justify-content: center;
+        margin-left: 100px;
+
+        
+
+    }
+    a:hover
+    {
+        color: white;
+        cursor: pointer;
+        font-style: normal;
+    }
+    button
+    {
+        text-align: center;
+        font-size: 20px;
+        margin-left: 130px;
+        border-radius: 20px;
+        width: 60px;
+        font-size: 15px;
+        margin-top: 10px;
+        background-color: skyblue;
+        border: 3px solid white;
+    }
+    button:hover
+    {
+        width: 100px;
+        font-size: 20px;
+        margin-left: 100px;
+        text-align: center;
+        font-weight: bold;
+        background-color: rgb(138, 6, 6);
+        transform: rotateY(360deg);
+        transition: 0.5s;
+        transition-delay: 0s;
+        cursor: pointer;
+       
+    }
+ 
+    input[name="username"]
+    {
+        margin-left: 15px;
+        width: 200px;
+        border-left: 0;
+        border-right: 0;
+        border-top: 0;
+        border-bottom: 3px solid skyblue;
+        background: transparent;
+        outline: none;
+        color: white;
+    }
+ 
+    input[name="password"]
+    {
+        margin-left: 19px;
+        width: 200px;
+        border-left: 0;
+        border-right: 0;
+        border-top: 0;
+        border-bottom: 3px solid skyblue;
+        background: transparent;
+        outline: none;
+        color: white;
+    }
+    ::placeholder
+    {
+        color: white;
+    }
+    input[type="submit"]
+    {
+        margin-left: 150px;
+        text-align: center;
+        justify-content: center;
+        margin-top: 10px;
+        width: 80px;
+        font-size: 15px;
+        font-weight: bold;
+        background-color: skyblue;
+        border: 2px solid white;
+        border-radius: 20px;
+        cursor: pointer;
+        margin-bottom: 20px;
+    }
+    input[type="submit"]:hover
+    {
+        transform: rotate(360deg);
+        transition: 1s;
+        transition-delay: 0s;
+        background-color: rgb(125, 161, 125);
+        border: 2px solid white;
+        cursor:progress;
+    }
+    .user-name
+    {
+        margin-top: 40px;
+    }
+    @media screen and (max-width: 750px)
+    {
+        *
+        {
+            padding: 0;
+            margin: 0;
+        }
+        .registration
+        {
+            width: 750px;
+            height: ;
+            display: inline-block;
+            gap: 0;
+            margin-top: 0;  
+             
+        }
+        .heading
+        {
+            margin-top: 1px;
+            margin-left: -300px;
+        }
+        h3 
+        {
+            margin-left: -300px;
+        }
+        h6 
+        {
+            margin-left: -300px;
+        }
+        fieldset 
+        {
+            width: fit-content;
+            margin-top: 40px;
+        }
+        
+        
+    }
+  </style>
+    <div class="topbar">
+        <hr>
+        <marquee direction="right">Twelp<span>.com </span></marquee>
+        <marquee direction="left">Prof<span>Tronics</span></marquee>
+    </div>
+    <div class="registration">
+        <div class="info">
+            <p class="heading">Welcome</p>
+            <h3>Twelp Digital Solutions</h3>
+            <h6>Founder: Lul Prof</h6>
+            <button mailto:>Email</button>
+        </div>
+        <div class="data">
+            <form method="post" action="login.php">
+                <fieldset>
+                    <legend></legend>
+                    <p style="text-align: center; font-size: 30px;">Login</p>
+                    <p class="user-name">Enter your Username:<input type="text" name="username" placeholder="Username or email"></p>
+                    <p>Enter your Password:<input type="text" name="password" placeholder="Password"></p>
+                    <input type="submit" name="submit" value="Login"><br>
+                    <a href="Register.html" target="_blank">Don't have a account?Register</a>
+                </fieldset>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>National Police Database</title>
+    <style>
+        *
+        {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        .container
+        {
+            background-color: rgb(35, 35, 66);
+            display: flex;
+            flex-direction: column;
+            padding: 10px;
+            height: 100vh;
+            
+        }
+        .container .intro h1
+        {
+            text-align: center;
+            margin: 20px;
+
+        }
+        span:nth-child(1)
+        {
+            color: red;
+        }
+        span:nth-child(2)
+        {
+            color:green;
+        }
+        span:nth-child(3)
+        {
+            color:white;
+        }
+        .form
+        {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-self: center;
+        }    
+        .form form
+        {
+            margin: 50px ;
+        }   
+        .form fieldset p
+        {
+            
+            margin: 20px;
+            cursor: pointer;
+        }
+        .form input[name="fname"]
+        {
+            margin-left: 20px;
+            background: transparent;
+            border: 0;
+            border-bottom: 3px solid black;
+            outline: none;
+            color: white;
+        }
+        .form input[name="mname"]
+        {
+            margin-left: 5px;
+            background: transparent;
+            border: 0;
+            border-bottom: 3px solid black;
+            outline: none;
+            color: white;
+        }
+        .form input[name="lname"]
+        {
+            margin-left: 20px;
+            background: transparent;
+            border: 0;
+            border-bottom: 3px solid black;
+            outline: none;
+            color: white;
+        }
+        .form input[name="Nid"]
+        {
+            margin-left: 10px;
+            background: transparent;
+            border: 0;
+            border-bottom: 3px solid black;
+            outline: none;
+            color: white;
+        }
+        .form input[name="contact"]
+        {
+            margin-left: px;
+            background: transparent;
+            border: 0;
+            border-bottom: 3px solid black;
+            outline: none;
+            color: white;
+        }
+        .form input[name="Address"]
+        {
+            margin-left: 40px;
+            background: transparent;
+            border: 0;
+            border-bottom: 3px solid black;
+            outline: none;
+            color: white;
+        }
+        .form textarea
+        {
+            margin-left: 20px;
+            background: transparent;
+            border: 0;
+            border-bottom: 3px solid black;
+            outline: black;
+            outline: none;
+            color: white;
+        }
+         .form input[type="submit"]
+        {
+            align-self: center;
+            background-color: red;
+            border-radius: 20px;
+            width: 80px;
+            text-align: center;
+            font-weight: bold;
+            font-size: 15px;
+            margin: 20px;
+            margin-left: 150px;
+
+        }
+        .form input[type="submit"]:hover
+        {
+            transform: rotateY(360deg);
+            transition: 0.5s;
+            transition-delay: 0s;
+            background-color: green;
+            color: white;
+            border: 2px solid black; 
+        }
+        .form input[type="file"]
+        {
+            margin-left: 20px;
+            background: transparent;
+            border: 0;
+            font-size: 15px;
+            font-weight: bolder;
+           
+        }
+        p
+        {
+            font-size: 20px;
+            font-weight: bold;
+
+        }
+        ::placeholder
+        {
+            color: black;
+            font-weight: bold;
+            font-style: italic;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="intro">
+            <h1><span>National</span> <span>Police</span> <span>Database</span> <span>Kenya</span></h1>
+        </div>
+        <div class="form">
+            <form method="post" action="policedb.php">
+                <fieldset>
+                    <p>First name:<input type="text" name="fname" placeholder="Enter First name"></p>
+                    <p>Middle name:<input type="text" name="mname" placeholder="Enter Maiden name"></p>
+                    <p>Last name:<input type="text" name="lname" placeholder="Enter Last name"></p>
+                    <p>National ID:<input type="number" name="Nid" placeholder="Enter Id No"></p>
+                    <p>Phone Number:<input type="text" name="contact" placeholder="Enter Phone number"></p>
+                    <p>Address:<input type="text" name="Address" placeholder="Enter Residency/Address"></p>
+                    <p>Mug Shot:<input type="file" name="Photo" ></p>
+                    <p>Crimes Committed:<textarea rows="auto" cols="auto" name="crime" placeholder="Crimes"></textarea></p>
+                    <input type="submit" name="submit" value="Upload">
+                </fieldset>
+            </form>
+        </div>
+    </div>
+    
+</body>
+</html>
